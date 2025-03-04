@@ -1,0 +1,69 @@
+@mixin imgFit($width: 200px, $height: 200px) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-fit: center center;
+  display: block;
+}
+
+@mixin btn($bg) {
+  padding: 1.5rem 2rem;
+  border: 2px solid $clr-light;
+  border-radius: 5rem;
+  color: $clr-light;
+  display: inline-block;
+  background: $bg;
+  &:hover {
+    background: darken($bg, 10);
+  }
+}
+
+@mixin btn2($bg) {
+  padding: 1.5rem 2rem;
+  border: 2px solid $clr-blue;
+  border-radius: 5rem;
+  color: $clr-blue;
+  display: inline-block;
+  background: $bg;
+  &:hover {
+    background: $clr-blue;
+    border: 2px solid $clr-light;
+    color: $clr-light;
+  }
+}
+
+@mixin btn-lb-lt($bg) {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid $clr-light;
+  border-radius: 2rem;
+  color: $clr-light;
+  display: inline-block;
+  background: $bg;
+  &:hover {
+    background: darken($bg, 10);
+  }
+}
+
+@mixin btn-db-dt($bg) {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid $clr-dark;
+  border-radius: 2rem;
+  color: $clr-dark;
+  display: inline-block;
+  background: $bg;
+  &:hover {
+    background: darken($bg, 10);
+  }
+}
+
+@mixin grid($cols: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-gap: $gap;
+}
+
+@mixin mediaQuery($width: 48rem) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
