@@ -67,3 +67,16 @@
     @content;
   }
 }
+
+@mixin centerBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin centerAll($height: 1px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: $height;
+}
